@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>資金週轉好夥伴</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: linear-gradient(to bottom right, #ffffff, #dde2e6);
+      color: #1d3557;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .card {
+      max-width: 480px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+    img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-top: 1rem;
+    }
+    ul {
+      text-align: left;
+      padding-left: 1.2rem;
+      line-height: 1.8;
+      color: #333;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      margin: 1rem auto;
+      padding: 1rem;
+      font-size: 1.2rem;
+      color: white;
+      background: #003D79;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .share {
+      background: #4d4d4d;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://i.ibb.co/DfRwyNG1/Chat-GPT-Image-2025-5-28-12-27-53.png" alt="名片頭像">
+    <h1>資金週轉好夥伴</h1>
+    <ul>
+      <li>✅ 核貸快速</li>
+      <li>✅ 月息低利率只要3%起</li>
+      <li>✅ 免擔保</li>
+      <li>✅ 金額最高100萬</li>
+      <li>✅ 只要有工作即可申辦</li>
+    </ul>
+    <a class="btn" href="https://line.me/R/ti/p/@581tnkgz" target="_blank">加入LINE好友</a>
+    <button class="btn share" onclick="copyLink()">🔗 複製名片連結</button>
+  </div>
+
+  <script>
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        alert("已複製名片網址，可貼給朋友！");
+      });
+    }
+  </script>
+</body>
+</html>
