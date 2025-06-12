@@ -64,15 +64,25 @@
       <li>✅ 金額最高100萬</li>
       <li>✅ 只要有工作即可申辦</li>
     </ul>
-    <a class="btn" href="https://line.me/R/ti/p/@581tnkgz" target="_blank">加入LINE好友</a>
-    <button class="btn share" onclick="copyLink()">🔗 複製名片連結</button>
+    <a class="btn" href="https://line.me/R/ti/p/@581tnkgz" target="_blank">➕ 加入LINE好友</a>
+    <button class="btn share" onclick="shareCard()">🔗 一鍵分享名片</button>
   </div>
 
   <script>
-    function copyLink() {
-      navigator.clipboard.writeText(window.location.href).then(() => {
-        alert("已複製名片網址，可貼給朋友！");
-      });
+    function shareCard() {
+      if (navigator.share) {
+        navigator.share({
+          title: "資金週轉好夥伴",
+          text: "📌 核貸快速、月息低、最高可貸100萬 👉 加我LINE",
+          url: window.location.href
+        }).then(() => {
+          console.log("分享成功！");
+        }).catch(err => {
+          console.log("分享取消或失敗", err);
+        });
+      } else {
+        alert("您的裝置不支援一鍵分享，請手動複製連結");
+      }
     }
   </script>
 </body>
